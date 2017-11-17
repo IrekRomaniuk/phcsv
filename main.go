@@ -46,9 +46,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("List: %v\n", *list)
-	//fmt.Printf("url: %s\n",*URL + *NAME )
-	ID, err := utils.PostPage(*URL, *USER, *PASS, list)
+	//fmt.Printf("List: %v\n", *list)
+	fmt.Printf("url: %s\n",*URL + *NAME )
+	ID, err := utils.PostPage(*URL + *NAME, *USER, *PASS, list)
 	if err != nil {
 		log.Fatal(err)
 	}

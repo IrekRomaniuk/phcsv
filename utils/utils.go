@@ -4,7 +4,6 @@ import (
 	"encoding/csv"
 	"os"
 	"bufio"
-	"fmt"
 	"net/http"
 	"bytes"
 	"crypto/tls"
@@ -29,7 +28,7 @@ func (list *List) ReadFile(file, name string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Printf("Lines: %v\n", len(lines)) 
+	//fmt.Printf("Lines: %v\n", len(lines)) 
     /*for i := range lines {   		
 		fmt.Println(lines[i])         	
     }*/
