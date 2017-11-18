@@ -12,15 +12,15 @@ var (
 	//URL of Phantom endpoint
 	URL = flag.String("url", "https://10.34.1.110/rest/decided_list/", "Phantom REST endpoint")
 	//NAME of Phantom list
-	NAME= flag.String("name", "Shields", "Name of custom list")
+	NAME= flag.String("name", "Shields", "Name of Phantom custom list")
 	//PATH to csv file
-	PATH = flag.String("path", "./", "path to read csv file from")	
+	PATH = flag.String("path", "./", "full name and path to read csv file from")	
 	//USER Phantom
 	USER    = flag.String("u", "admin", "Phantom username")
 	//PASS Phantom
 	PASS    = flag.String("p", "", "Phantom password")
 	//MIN Minimal number of lines in file
-	MIN    = flag.Int("min", 0, "Min of lines in csv files (or will skip)")
+	MIN    = flag.Int("min", 0, "Min of lines in csv file (or will skip)")
 	version = flag.Bool("v", false, "Prints current version")
 	// Version : Program version
 	Version = "No Version Provided" 
