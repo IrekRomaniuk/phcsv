@@ -19,3 +19,12 @@ Usage:C:\Users\IREKRO~1\AppData\Local\Temp\go-build933548362\command-line-argume
         Phantom REST endpoint (default "https://10.34.1.110/rest/decided_list/")
   -v    Prints current version
 ```
+
+Example of use:
+
+```
+$ ./phcsv.sh 
+List size: 1230
+url: https://10.34.1.110/rest/decided_list/mylist
+Response ID: 0
+```
