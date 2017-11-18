@@ -4,7 +4,7 @@
 Parameters:
 ```
 Copyright 2017 @IrekRomaniuk. All jdk-rights reversed.
-Usage:C:\Users\IREKRO~1\AppData\Local\Temp\go-build933548362\command-line-arguments\_obj\exe\main.exe:
+Usage:
   -min int
         Min of lines in csv files (or will skip)
   -name string
