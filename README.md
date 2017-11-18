@@ -1,1 +1,21 @@
 ## PHPSM
+### CSV
+
+Parameters:
+```
+Copyright 2017 @IrekRomaniuk. All jdk-rights reversed.
+Usage:C:\Users\IREKRO~1\AppData\Local\Temp\go-build933548362\command-line-arguments\_obj\exe\main.exe:
+  -min int
+        Min of lines in csv files (or will skip)
+  -name string
+        Name of custom list (default "Shields")
+  -p string
+        Phantom password
+  -path string
+        path to read csv file from (default "./")
+  -u string
+        Phantom username (default "admin")
+  -url string
+        Phantom REST endpoint (default "https://10.34.1.110/rest/decided_list/")
+  -v    Prints current version
+```
