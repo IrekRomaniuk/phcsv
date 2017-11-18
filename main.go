@@ -19,6 +19,8 @@ var (
 	USER    = flag.String("u", "admin", "Phantom username")
 	//PASS Phantom
 	PASS    = flag.String("p", "", "Phantom password")
+	//MIN Minimal number of lines in file
+	MIN    = flag.Int("min", 0, "Min of lines in csv files (or will skip)")
 	version = flag.Bool("v", false, "Prints current version")
 	// Version : Program version
 	Version = "No Version Provided" 
@@ -46,11 +48,15 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	//fmt.Printf("List: %v\n", *list)
-	fmt.Printf("url: %s\n",*URL + *NAME )
-	ID, err := utils.PostPage(*URL + *NAME, *USER, *PASS, list)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf("ID: %v\n", ID)
+	fmt.Printf("List size: %v\n", len(list.Content))
+	if len(list.Content) > *MIN {
+		fmt.Printf("url: %s\n",*URL + *NAME )
+		ID, err := utils.PostPage(*URL + *NAME, *USER, *PASS, list)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf("Response ID: %v\n", ID)
+	} else {
+		fmt.Printf("Number of lines in csv file less than min: %v\n", *MIN)
+	} 
 }

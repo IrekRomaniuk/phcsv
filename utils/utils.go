@@ -27,13 +27,8 @@ func (list *List) ReadFile(file, name string) error {
 	lines, err := r.ReadAll()
 	if err != nil {
 		return err
-	}
-	//fmt.Printf("Lines: %v\n", len(lines)) 
-    /*for i := range lines {   		
-		fmt.Println(lines[i])         	
-    }*/
+	}	
 	*list = List{Content: lines, Name: name} 
-	//copy(*list.Content, lines)
 	return nil
 }
 //Response from Phantom 
@@ -58,7 +53,6 @@ func PostPage(url, user, pass string, data interface{}) (int64, error) {
 		return 0, err
 	}
 	req.SetBasicAuth(user, pass)
-	//req.Header.Set("ph-auth-token", token)
 	req.Header.Set("Content-Type", "application/json")
 
 	resp, err := client.Do(req)
