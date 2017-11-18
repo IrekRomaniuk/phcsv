@@ -14,7 +14,7 @@ var (
 	//NAME of Phantom list
 	NAME= flag.String("name", "Shields", "Name of Phantom custom list")
 	//PATH to csv file
-	PATH = flag.String("path", "./", "full name and path to read csv file from")	
+	PATH = flag.String("path", "./", "Full name and path to read csv file from")	
 	//USER Phantom
 	USER    = flag.String("u", "admin", "Phantom username")
 	//PASS Phantom
